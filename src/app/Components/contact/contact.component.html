@@ -1,0 +1,56 @@
+<div class="main pageLoader" #main>
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="content">
+        <div class="text-on-image">
+            <img src="../../../assets/Images/Carousel/carousel (5).jpg" alt="medium8" loading="lazy" class="loader"
+                (load)="onLoadComplete()">
+            <p>Get in Touch
+                Whether you're interested in booking a session, have questions about my work, or just want to say
+                hello,
+                I'd love to hear from you! Please fill out the form below, and I'll get back to you as soon as
+                possible.
+            </p>
+            <div class="contact-form">
+                <form>
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Enter your First Name">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Enter your Last Name">
+                    </div>
+                    <div>
+                        <label for="contactNumber">Contact No.</label>
+                        <input type="number" id="contactNumber">
+                    </div>
+                    <div>
+                        <label for="emailId">Email ID</label>
+                        <input type="email" id="emailId" placeholder="Enter your email ID">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Please Enter your message here"></textarea>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <p class="note">
+            If you prefer, you can also reach me directly at <a
+                href="mailto:shuttersymphony@gmail.com">shuttersymphony@gmail.com</a> or connect with me
+            on <a href="https://www.instagram.com/" target="_blank">Instagram</a><img
+                src="../../../assets/icons/instagram.png" alt="insta">.
+        </p>
+        <br>
+        <p class="msg">
+            Looking forward to creating something beautiful together!
+        </p>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

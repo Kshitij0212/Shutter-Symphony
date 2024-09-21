@@ -1,0 +1,83 @@
+@import ../../../assets/_variables
+
+.main
+    display: flex
+    flex-direction: column
+    height: fit-content
+
+    .container
+        width: 80%
+        margin: 2rem auto
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 3rem
+        flex-grow: 1
+
+        img
+            height: 90vh
+            border-radius: 5px
+
+        .content
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-evenly
+            height: fit-content
+            gap: 1rem
+            color: $primary-color
+
+            p
+                text-align: justify
+                font-family: $primary-font
+                animation: fade-in linear forwards
+                animation-timeline: view()
+                animation-range: entry
+
+                span
+                    font-size: 2rem
+                    font-weight: bold
+
+@media screen and (max-width: 1100px) and (min-width: 701px)
+    .main
+        .container
+            display: block
+
+            img
+                float: left
+                margin-inline-end: 1rem
+                margin-block-end: 0.5rem
+
+            .content
+                display: block
+
+                p
+                    margin-block-end: 1rem
+
+@media screen and (max-width: 700px)
+
+    .main
+
+        .container
+            width: 100%
+            height: fit-content
+            flex-direction: column
+            align-items: center
+            gap: 1rem
+            margin-block: 1rem
+
+            img
+                height: 70vh
+                width: auto
+                object-fit: cover
+
+            .content
+                height: fit-content
+                gap: 1rem
+                width: 90%
+
+                p
+                    font-size: $mobile-font-size
+
+                    span
+                        font-size: 1.5rem

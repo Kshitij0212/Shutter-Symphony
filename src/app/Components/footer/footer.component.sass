@@ -1,0 +1,59 @@
+@import ../../../assets/_variables
+
+footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: fit-content
+    background-color: $primary-color
+    color: $secondary-color
+
+    .title
+        display: flex
+        flex-direction: column
+        width: 25%
+        align-items: center
+        justify-content: center
+        font-family: $secondary-font
+        text-align: center
+
+    .copyright
+        align-self: flex-end
+        margin: 0 auto 1rem auto
+        font-family: $primary-font
+
+    ul
+        list-style: none
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        flex-direction: column
+        margin: 1rem
+        width: 25%
+
+        img
+            width: 1.75vw
+
+//Mobile view specifications
+@media screen and (max-width: 700px)
+
+    footer
+        flex-direction: column
+
+        .title
+            width: 100%
+            order: 1
+
+        .copyright
+            order: 3
+            font-size: 0.75rem
+
+        ul
+            width: 100%
+            flex-direction: row
+            gap: 1rem
+            order: 2
+
+            img
+                width: 7vw

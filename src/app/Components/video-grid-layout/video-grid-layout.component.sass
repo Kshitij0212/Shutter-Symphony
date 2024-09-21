@@ -1,0 +1,61 @@
+@import ../../../assets/_variables
+
+.content
+    width: 90%
+    margin: 2rem auto
+
+    .videos
+        width: 100%
+
+    .grid
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        gap: 1rem
+        margin-block: 2rem
+        flex-grow: 1
+
+        .text-on-video
+            width: 49%
+            position: relative
+            animation: fade-in linear forwards
+            animation-timeline: view()
+            animation-range: entry
+
+            &:hover
+                .text
+                    opacity: 1
+                    cursor: pointer
+
+            .videos-grid
+                width: 100%
+
+            .text
+                top: 0
+                position: absolute
+                width: 100%
+                height: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: rgba(0, 0, 0, 0.7)
+                opacity: 0
+                transition: opacity 0.3s ease
+
+                h1
+                    color: $secondary-color
+                    text-shadow: 0 0 5px $primary-color
+
+@media screen and (max-width: 700px)
+
+    .content
+        width: 100%
+
+        .grid
+            .text-on-video
+                width: 90%
+
+                .text
+                    h1
+                        font-size: $mobile-heading-font-size

@@ -1,0 +1,7 @@
+<div *ngIf="this.currentImage">
+    <img src="{{ this.currentImage.src }}" alt="{{ this.currentImage.alt }}" [class.fade-in]="animation" class="loader">
+    <div class="buttonContainer">
+        <button (click)="previousImage()"><img src="../../../assets/icons/arrow-left.svg" alt=""></button>
+        <button (click)="nextImage()"><img src="../../../assets/icons/arrow-right.svg" alt=""></button>
+    </div>
+</div>

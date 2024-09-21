@@ -1,0 +1,59 @@
+@import ../../../assets/_variables
+
+nav
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    ul
+        list-style: none
+        display: flex
+        width: 100%
+        justify-content: space-between
+        align-items: center
+
+        li
+            font-family: $primary-font
+            position: relative
+
+            a
+                text-decoration: none
+                color: $primary-color !important
+
+                &:hover
+                    cursor: pointer
+
+            .active
+                padding: 0.25rem
+                border-radius: 10px
+                box-shadow: 0px 0px 5px $primary-color
+
+            .dropdown
+                display: none
+                position: absolute
+                top: 100%
+                left: 0
+                background-color: $secondary-color
+                list-style-type: none
+                margin: 0
+                padding: 0
+                z-index: 1000
+                width: fit-content
+                border-radius: 5px
+                box-shadow: 0 0 5px $primary-color
+
+                &:hover
+                    display: block
+
+                li
+                    font-family: $primary-font
+                    padding: 1rem
+
+                    a
+                        text-decoration: none
+                        color: $primary-color !important
+
+            &:hover
+                .dropdown
+                    display: block

@@ -1,0 +1,22 @@
+<div class="main">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="content">
+        <div class="quote">
+            <p>"If you truly love nature, you will find beauty everywhere."</p>
+            <p>-Vincent Van Gogh</p>
+        </div>
+        <hr>
+        <div class="image-grid">
+            <div class="column" *ngFor="let column of getImagesAsPerColumn()">
+                <div class="image" *ngFor="let image of column">
+                    <img [src]="image.src" [alt]="image.alt">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="main">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="content">
+        <div class="card" *ngFor="let ads of adsList">
+            <h1>Brand: {{ ads.brand }}</h1>
+            <h1>Director: {{ ads.director }}</h1>
+            <div class="previewImages loader" (click)="openModal(ads)">
+                <img *ngFor="let preImages of ads.images" [src]="preImages.src" [alt]="preImages.alt" loading="lazy">
+            </div>
+            <div class="video loader">
+                <video [src]="ads.src" controls preload="metadata"></video>
+            </div>
+        </div>
+        <div class="modalPopUp" *ngIf="displayModal">
+            <ng-container *ngTemplateOutlet="modal"></ng-container>
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+    <ng-template #modal let-video="video">
+        <div class="modal">
+            <div class="modal-content">
+                <video [src]="selectedAd?.src" controls autoplay></video>
+                <button (click)="closeModal()"><img src="../../../assets/icons/close.png" alt="close"></button>
+            </div>
+        </div>
+    </ng-template>
+</div>
